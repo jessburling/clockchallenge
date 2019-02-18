@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    margin: 0;
+    background-color: #72b7cc;
+    height: 100%;
+    overflow: hidden;
+}
+
+.clock-container {
+    display: flex;
+    align-items: center;
+    background-image: url(clock-01.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 600px;
+    margin: 50px auto;
+}
+
+.sun-rays {
+    background-image: url(rays-02.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    margin-left: 570px;
+    margin-top: 197px;
+    animation-name: rays;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.clock {
+    margin-top: 172px;
+    margin-left: 258px;
+    height: 81px;
+    width: 82px;
+
+    position: relative;
+}
+
+.hand {
+    position: absolute;
+    height: 15px;
+    width: 4px;
+    background-color: #414042;
+    bottom: 40px;
+    left: 40px;
+    border-radius: 2px;
+    transform-origin: 50% 100%;
+}
+
+.minutes {
+    height: 33px;
+}
+
+.seconds {
+    height: 33px;
+    width: 1px;
+    background-color: lightslategray;
+}
+
+.cloud-container {
+    display: flex;
+    position: absolute;
+    height: 78px;
+    width: 200px;
+    margin-top: 400px;
+    margin-left: 1000px;
+    align-items: center;
+    background-image: url(cloud-02.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation-name: float;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.cloud-clock {
+    display: flex;
+    align-items: center;
+    height: 75px;
+    width: 200px;
+    margin: auto;
+}
+
+
+#cloud-time {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: #414042;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes float {
+    0% {transform: translateY(30px)}
+    50% {transform: translateY(60px)}
+    100% {transform: translateY(30px)}
+}
+
+@keyframes rays {
+from {transform: rotate(0deg);}
+to {transform: rotate(360deg);}
+}
